@@ -189,6 +189,15 @@ function addToCart(productName, productPrice, productImage) {
   // Cập nhật số lượng trong biểu tượng giỏ hàng
   updateCartCount();
   updateCartSummary();
+  Toastify({
+    text: `${productName} đã được thêm vào giỏ hàng!`,
+    duration: 3000, // Thời gian thông báo hiển thị (3 giây)
+    close: true, // Hiển thị nút đóng thông báo
+    gravity: "top", // Vị trí thông báo: "top" hoặc "bottom"
+    position: "right", // Vị trí thông báo: "left", "center", "right"
+    backgroundColor: "#4CAF50", // Màu nền thông báo (thành công)
+    stopOnFocus: true, // Dừng khi người dùng hover vào thông báo
+  }).showToast();
 }
 
 // Hàm cập nhật bảng giỏ hàng
